@@ -22,3 +22,11 @@ else:
 image = cv2.imread(file_name)
 
 cv2.imshow('Downloaded Image', image)
+
+#grayscale
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+cv2.imshow("image",gray_image)
+
+#이미지 저장하기
+cv2.imwrite('gray_image.jpg', gray_image)
